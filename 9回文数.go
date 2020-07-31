@@ -1,18 +1,22 @@
 package main
 
 import "strconv"
-import "fmt"
 
 func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
 	}
 	s := strconv.Itoa(x)
-	println(s[1])
-	fmt.Printf("a,%T", s)
+	for i, j := 0, len(s)-1; i < j; {
+		if s[i] != s[j] {
+			return false
+		}
+		i++
+		j--
+	}
 	return true
 }
 
 func main() {
-	print(isPalindrome(121121212))
+	print(isPalindrome(121))
 }
