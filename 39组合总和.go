@@ -1,5 +1,6 @@
 package main
 
+import "fmt"
 import "sort"
 
 func combinationSum(candidates []int, target int) [][]int {
@@ -28,4 +29,5 @@ func dfs(candidates, nums []int, target, left int, res *[][]int) {
 func main() {
 	nums := []int{1, 2, 3}
 	a := combinationSum(nums, 8)
+	fmt.Printf("%v", a)
 }
